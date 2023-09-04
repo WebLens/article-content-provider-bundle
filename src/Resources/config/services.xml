@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service class="CatCasCarSkillboxSymfony\ArticleContentProviderBundle\ArticleContentProvider" id="catcascar_skillbox_symfony.article_content.provider" public="true">
+            <argument type="service" id="catcascar_skillbox_symfony.word_decorator" />
+            <argument type="service" id="event_dispatcher" on-invalid="null" />
+        </service>
+        <service class="CatCasCarSkillboxSymfony\ArticleContentProviderBundle\MarkdownWordDecorator" id="catcascar_skillbox_symfony.article_word_decorator" public="false" />
+        <service alias="catcascar_skillbox_symfony.article_word_decorator" id="catcascar_skillbox_symfony.word_decorator" public="false" />
+        <service id="CatCasCarSkillboxSymfony\ArticleContentProviderBundle\ArticleContentProvider" alias="catcascar_skillbox_symfony.article_content.provider" public="false"/>
+    </services>
+</container>

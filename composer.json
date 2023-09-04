@@ -1,0 +1,20 @@
+{
+  "name": "symfony-skillbox/article-content-provider-bundle",
+  "description": "Генератор контента статьи",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Kochetkov Artem",
+      "email": "artem.kochetkov@npo-at.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "CatCasCarSkillboxSymfony\\ArticleContentProviderBundle\\": "src"
+    }
+  },
+  "version": "dev-master"
+}
